@@ -3,17 +3,16 @@
 </script>
 
 <template>
-router-link to="/">Home</router-link>
-<router-link to="/about">About</router-link>
-<router-link to="/addcity">Add City</router-link>
-<router-link :to="{name: edit-city }">Edit City</router-link>
-<div class="container">
-  <div class="row">
-    <div class="col-md-10">
-      <router-view/>
-    </div>
+  <div id="nav">
+
+    <router-link to="/">Home |</router-link>
+    <router-link to="/about">About |</router-link>
+    <router-link to="/add-city">Add City |</router-link>
   </div>
-</div>
+
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
 
 <style>
@@ -23,6 +22,10 @@ router-link to="/">Home</router-link>
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
+#nav {
+  padding: 20px;
+}
+
 </style>

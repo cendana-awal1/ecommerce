@@ -1,6 +1,6 @@
 <template>
     <h1>
-        halaman home
+        halaman About
     </h1>
 </template>
 <script setup></script>
