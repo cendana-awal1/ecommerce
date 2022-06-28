@@ -42,8 +42,12 @@ const picture = ref("")
 
 const onFileChange = (e) => {
     const file = e.target.files[0]
-    picture.value = URL.createObjectURL(file)
-    console.log(picture.value);
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onload = (e) => {
+        picture.value = e.target.result
+    }
+   
 }
 
 const createCity = async () => {
